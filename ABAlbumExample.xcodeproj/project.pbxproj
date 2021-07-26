@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7371EE626AF1F3E0036C765 /* ABAlbum in Frameworks */ = {isa = PBXBuildFile; productRef = C7371EE526AF1F3E0036C765 /* ABAlbum */; };
 		C7544C7A26AF1EAD0003DC2D /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C7926AF1EAD0003DC2D /* Tests_iOS.swift */; };
 		C7544C8426AF1EAD0003DC2D /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C8326AF1EAD0003DC2D /* Tests_macOS.swift */; };
 		C7544C8526AF1EAD0003DC2D /* ABAlbumExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */; };
@@ -44,6 +45,7 @@
 		C7544C7926AF1EAD0003DC2D /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		C7544C7F26AF1EAD0003DC2D /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7544C8326AF1EAD0003DC2D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C7544C9A26AF1EEB0003DC2D /* ABAlbum */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ABAlbum; path = ../ABAlbum; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7371EE626AF1F3E0036C765 /* ABAlbum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7371EE426AF1F3E0036C765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7544C5D26AF1EAC0003DC2D = {
 			isa = PBXGroup;
 			children = (
+				C7544C9926AF1EEB0003DC2D /* Packages */,
 				C7544C6226AF1EAC0003DC2D /* Shared */,
 				C7544C7826AF1EAD0003DC2D /* Tests iOS */,
 				C7544C8226AF1EAD0003DC2D /* Tests macOS */,
 				C7544C6B26AF1EAD0003DC2D /* Products */,
+				C7371EE426AF1F3E0036C765 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +137,14 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		C7544C9926AF1EEB0003DC2D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C7544C9A26AF1EEB0003DC2D /* ABAlbum */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +161,9 @@
 			dependencies = (
 			);
 			name = "ABAlbumExample (iOS)";
+			packageProductDependencies = (
+				C7371EE526AF1F3E0036C765 /* ABAlbum */,
+			);
 			productName = "ABAlbumExample (iOS)";
 			productReference = C7544C6A26AF1EAD0003DC2D /* ABAlbumExample.app */;
 			productType = "com.apple.product-type.application";
@@ -455,7 +478,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +508,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +732,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7371EE526AF1F3E0036C765 /* ABAlbum */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ABAlbum;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7544C5E26AF1EAC0003DC2D /* Project object */;
 }

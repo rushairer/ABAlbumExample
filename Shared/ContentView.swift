@@ -15,8 +15,6 @@ struct ContentView: View {
                 NavigationLink("Album", destination:  AlbumPage())
                 NavigationLink("Camera", destination:  CameraPage())
             }
-            .navigationTitle("Home")
-            
             Text("Welcome")
         }
     }

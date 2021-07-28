@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ABAlbumExample--iOS--Info.plist"; sourceTree = "<group>"; };
 		C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAlbumExampleApp.swift; sourceTree = "<group>"; };
 		C7544C6426AF1EAC0003DC2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7544C6526AF1EAD0003DC2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		C7544C5D26AF1EAC0003DC2D = {
 			isa = PBXGroup;
 			children = (
+				C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */,
 				C7EAF80C26AF68D700D6456F /* Packages */,
 				C7544C6226AF1EAC0003DC2D /* Shared */,
 				C7544C7826AF1EAD0003DC2D /* Tests iOS */,
@@ -478,6 +480,8 @@
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABAlbumExample--iOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,6 +513,8 @@
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABAlbumExample--iOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

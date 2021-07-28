@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>If you&apos;d like to takephoto, you need to give permission to access your camera.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>If you&apos;d like to save pictures to your camera roll, you need to give permission to access your photo library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>If you&apos;d like to save pictures to your camera roll, you need to give permission to access your photo library.</string>
+</dict>
+</plist>

@@ -1,0 +1,4 @@
+[submodule "ABAlbum"]
+	path = ABAlbum
+	url = git@github.com:rushairer/ABAlbum.git
+	branch = main

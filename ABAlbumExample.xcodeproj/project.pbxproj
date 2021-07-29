@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7371EE626AF1F3E0036C765 /* ABAlbum in Frameworks */ = {isa = PBXBuildFile; productRef = C7371EE526AF1F3E0036C765 /* ABAlbum */; };
+		C73E758226B23C5600EE33DD /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */; };
+		C73E758326B23C5600EE33DD /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */; };
 		C74410FF26AF630100ACB826 /* ABAlbum in Frameworks */ = {isa = PBXBuildFile; productRef = C74410FE26AF630100ACB826 /* ABAlbum */; };
 		C7544C7A26AF1EAD0003DC2D /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C7926AF1EAD0003DC2D /* Tests_iOS.swift */; };
 		C7544C8426AF1EAD0003DC2D /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C8326AF1EAD0003DC2D /* Tests_macOS.swift */; };
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ABAlbumExample--iOS--Info.plist"; sourceTree = "<group>"; };
+		C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
 		C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAlbumExampleApp.swift; sourceTree = "<group>"; };
 		C7544C6426AF1EAC0003DC2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7544C6526AF1EAD0003DC2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 				C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */,
 				C7544C6426AF1EAC0003DC2D /* ContentView.swift */,
 				C7544C6526AF1EAD0003DC2D /* Assets.xcassets */,
+				C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -281,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7544C8926AF1EAD0003DC2D /* Assets.xcassets in Resources */,
+				C73E758326B23C5600EE33DD /* PreviewAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7544C8A26AF1EAD0003DC2D /* Assets.xcassets in Resources */,
+				C73E758226B23C5600EE33DD /* PreviewAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Shared/PreviewAssets.xcassets;
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -510,6 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Shared/PreviewAssets.xcassets;
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -546,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Shared/PreviewAssets.xcassets;
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -577,6 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Shared/PreviewAssets.xcassets;
 				DEVELOPMENT_TEAM = 292J49Y2B4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;

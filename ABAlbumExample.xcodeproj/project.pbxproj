@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C71B26F426B2B05A00291427 /* ABAlbumExample--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ABAlbumExample--macOS--Info.plist"; sourceTree = "<group>"; };
+		C71B26F526B2B0BF00291427 /* ABAlbumExample (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ABAlbumExample (macOS).entitlements"; sourceTree = "<group>"; };
 		C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ABAlbumExample--iOS--Info.plist"; sourceTree = "<group>"; };
 		C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
 		C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAlbumExampleApp.swift; sourceTree = "<group>"; };
@@ -94,16 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C747588F26B2B1A2008A961B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C71B26F526B2B0BF00291427 /* ABAlbumExample (macOS).entitlements */,
+				C71B26F426B2B05A00291427 /* ABAlbumExample--macOS--Info.plist */,
+				C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C7544C5D26AF1EAC0003DC2D = {
 			isa = PBXGroup;
 			children = (
-				C73E757E26B1B67700EE33DD /* ABAlbumExample--iOS--Info.plist */,
+				C7371EE426AF1F3E0036C765 /* Frameworks */,
 				C7EAF80C26AF68D700D6456F /* Packages */,
+				C7544C6B26AF1EAD0003DC2D /* Products */,
+				C747588F26B2B1A2008A961B /* Resources */,
 				C7544C6226AF1EAC0003DC2D /* Shared */,
 				C7544C7826AF1EAD0003DC2D /* Tests iOS */,
 				C7544C8226AF1EAD0003DC2D /* Tests macOS */,
-				C7544C6B26AF1EAD0003DC2D /* Products */,
-				C7371EE426AF1F3E0036C765 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -550,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ABAlbumExample (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -561,6 +574,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABAlbumExample--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ABAlbumExample (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -593,6 +608,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABAlbumExample--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

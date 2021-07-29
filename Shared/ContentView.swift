@@ -9,12 +9,23 @@ import SwiftUI
 import ABAlbum
 
 struct ContentView: View {
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("Album", destination:  AlbumPage())
-                NavigationLink("Camera", destination:  CameraPage())
+                Section {
+                    NavigationLink("Album", destination:  AlbumPage())
+                    NavigationLink("Camera", destination:  CameraPage())
+                }
+                Section {
+                    Button("Go to system settings") {
+                        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                        openURL(url)
+                    }
+                }
             }
+            .listStyle(.insetGrouped)
             Text("Welcome")
         }
     }

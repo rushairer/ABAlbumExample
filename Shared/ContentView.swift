@@ -54,7 +54,6 @@ struct ContentView: View {
 #endif
             Text("Welcome")
         }
-        
     }
 }
 

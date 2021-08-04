@@ -39,7 +39,6 @@ struct ContentView: View {
                     NavigationLink("Camera", destination:  CameraPage())
                 }
 #if !os(macOS)
-                
                 Section {
                     Button("Go to system settings") {
                         guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
@@ -47,7 +46,6 @@ struct ContentView: View {
                     }
                 }
 #endif
-                
             }
 #if !os(macOS)
             .listStyle(.insetGrouped)

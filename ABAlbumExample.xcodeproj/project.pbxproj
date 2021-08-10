@@ -19,6 +19,8 @@
 		C7544C8826AF1EAD0003DC2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C6426AF1EAC0003DC2D /* ContentView.swift */; };
 		C7544C8926AF1EAD0003DC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7544C6526AF1EAD0003DC2D /* Assets.xcassets */; };
 		C7544C8A26AF1EAD0003DC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7544C6526AF1EAD0003DC2D /* Assets.xcassets */; };
+		C77BFFB126C2E46E00F38053 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77BFFB026C2E46E00F38053 /* SettingPage.swift */; };
+		C77BFFB226C2E46E00F38053 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77BFFB026C2E46E00F38053 /* SettingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		C7544C7926AF1EAD0003DC2D /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		C7544C7F26AF1EAD0003DC2D /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7544C8326AF1EAD0003DC2D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C77BFFB026C2E46E00F38053 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		C7EAF80D26AF68D700D6456F /* ABAlbum */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ABAlbum; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +119,7 @@
 			children = (
 				C7544C6326AF1EAC0003DC2D /* ABAlbumExampleApp.swift */,
 				C7544C6426AF1EAC0003DC2D /* ContentView.swift */,
+				C77BFFB026C2E46E00F38053 /* SettingPage.swift */,
 				C7544C6526AF1EAD0003DC2D /* Assets.xcassets */,
 				C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */,
 			);
@@ -325,6 +329,7 @@
 			files = (
 				C7544C8726AF1EAD0003DC2D /* ContentView.swift in Sources */,
 				C7544C8526AF1EAD0003DC2D /* ABAlbumExampleApp.swift in Sources */,
+				C77BFFB126C2E46E00F38053 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 			files = (
 				C7544C8826AF1EAD0003DC2D /* ContentView.swift in Sources */,
 				C7544C8626AF1EAD0003DC2D /* ABAlbumExampleApp.swift in Sources */,
+				C77BFFB226C2E46E00F38053 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

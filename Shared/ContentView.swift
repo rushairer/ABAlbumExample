@@ -10,24 +10,18 @@ import ABAlbum
 import Photos
 
 struct ContentView: View {
-    @Environment(\.openURL) var openURL
+    @State private var mediaType: MediaType = .both
+    @State private var colorScheme: UIUserInterfaceStyle = .unspecified
     
     /// 是否显示权限提示页. 默认: 不显示.
-    @State private var showsAlbumNoPermissionView: Bool = AlbumService.shared.isNotDetermined
-    
-    init() {
-        let options = PHFetchOptions()
-        options.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.image.rawValue)
-        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-
-        AlbumService.shared.collectionFetchOptions = options
-    }
+    @State private var showsAlbumNoPermissionView: Bool = AlbumAuthorizationStatus.isNotDetermined
     
     var albumPage: some View {
         AlbumPage()
             .showsNoPermissionView($showsAlbumNoPermissionView)
+            .albumFetchOptions(.collectionFetchOptions(with: mediaType))
             .task {
-                showsAlbumNoPermissionView = await !AlbumService.shared.hasAlbumPermission
+                showsAlbumNoPermissionView = await !AlbumAuthorizationStatus.hasAlbumPermission
             }
     }
     
@@ -36,22 +30,21 @@ struct ContentView: View {
             List {
                 Section {
                     NavigationLink("Album", destination: albumPage)
+                    
                     NavigationLink("Camera", destination:  CameraPage())
                 }
-#if !os(macOS)
+
                 Section {
-                    Button("Go to system settings") {
-                        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
-                        openURL(url)
-                    }
+                    NavigationLink("Settings", destination: SettingPage(mediaType: $mediaType, colorScheme: $colorScheme))
                 }
-#endif
+
             }
 #if !os(macOS)
             .listStyle(.insetGrouped)
 #endif
             Text("Welcome")
         }
+        .preferredColorScheme(ColorScheme(colorScheme))
     }
 }
 

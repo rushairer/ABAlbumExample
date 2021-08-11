@@ -33,19 +33,15 @@ struct SettingPage: View {
                 .pickerStyle(InlinePickerStyle())
             }
             
-#if !os(macOS)
             Section(header: Text("System Setting")) {
                 Button("Go to system settings") {
                     guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
                     openURL(url)
                 }
             }
-#endif
         }
         .navigationTitle("Settings")
-#if !os(macOS)
         .listStyle(.insetGrouped)
-#endif
     }
 }
 

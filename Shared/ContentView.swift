@@ -39,9 +39,7 @@ struct ContentView: View {
                 }
 
             }
-#if !os(macOS)
             .listStyle(.insetGrouped)
-#endif
             Text("Welcome")
         }
         .preferredColorScheme(ColorScheme(colorScheme))
@@ -52,7 +50,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-#if os(iOS)
             ContentView()
                 .previewInterfaceOrientation(.landscapeRight)
             ContentView()
@@ -60,7 +57,6 @@ struct ContentView_Previews: PreviewProvider {
                 .accentColor(.pink)
             ContentView()
                 .previewDevice("iPad mini (5th generation)")
-#endif
         }
     }
 }

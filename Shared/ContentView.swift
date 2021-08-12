@@ -12,14 +12,14 @@ import Photos
 struct ContentView: View {
     @State private var mediaType: MediaType = .both
     @State private var colorScheme: UIUserInterfaceStyle = .unspecified
-    
+        
     /// 是否显示权限提示页. 默认: 不显示.
     @State private var showsAlbumNoPermissionView: Bool = AlbumAuthorizationStatus.isNotDetermined
     
     var albumPage: some View {
         AlbumPage()
             .showsNoPermissionView($showsAlbumNoPermissionView)
-            .albumFetchOptions(.collectionFetchOptions(with: mediaType))
+            .albumFetchOptions(AlbumFetchOptions.fetchOptions(with: mediaType))
             .task {
                 showsAlbumNoPermissionView = await !AlbumAuthorizationStatus.hasAlbumPermission
             }

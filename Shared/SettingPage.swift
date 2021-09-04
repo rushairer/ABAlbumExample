@@ -10,9 +10,9 @@ import ABAlbum
 
 struct SettingPage: View {
     @Environment(\.openURL) var openURL
-    @Binding var mediaType: MediaType
-    @Binding var colorScheme: UIUserInterfaceStyle
-    
+    @AppStorage("mediaType") var mediaType: MediaType = .both
+    @AppStorage("colorScheme") var colorScheme: UIUserInterfaceStyle = .unspecified
+
     var body: some View {
         List {
             Section(header: Text("Album Setting")) {
@@ -47,6 +47,6 @@ struct SettingPage: View {
 
 struct SettingPage_Previews: PreviewProvider {
     static var previews: some View {
-        SettingPage(mediaType: .constant(.both), colorScheme: .constant(.unspecified))
+        SettingPage()
     }
 }

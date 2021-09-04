@@ -14,6 +14,7 @@
 		C7544C8726AF1EAD0003DC2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7544C6426AF1EAC0003DC2D /* ContentView.swift */; };
 		C7544C8926AF1EAD0003DC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7544C6526AF1EAD0003DC2D /* Assets.xcassets */; };
 		C77BFFB126C2E46E00F38053 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77BFFB026C2E46E00F38053 /* SettingPage.swift */; };
+		C7D71AEF26CCFC0B00CD798F /* EditorPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D71AEE26CCFC0B00CD798F /* EditorPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		C7544C7526AF1EAD0003DC2D /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7544C7926AF1EAD0003DC2D /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		C77BFFB026C2E46E00F38053 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
+		C7D71AEE26CCFC0B00CD798F /* EditorPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPage.swift; sourceTree = "<group>"; };
+		C7D71AF026CD06E800CD798F /* SwiftConcurrencyExtensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftConcurrencyExtensions; sourceTree = "<group>"; };
 		C7EAF80D26AF68D700D6456F /* ABAlbum */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ABAlbum; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,7 @@
 				C77BFFB026C2E46E00F38053 /* SettingPage.swift */,
 				C7544C6526AF1EAD0003DC2D /* Assets.xcassets */,
 				C73E757F26B23C0400EE33DD /* PreviewAssets.xcassets */,
+				C7D71AEE26CCFC0B00CD798F /* EditorPage.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C7EAF80D26AF68D700D6456F /* ABAlbum */,
+				C7D71AF026CD06E800CD798F /* SwiftConcurrencyExtensions */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C7544C5D26AF1EAC0003DC2D;
 			productRefGroup = C7544C6B26AF1EAD0003DC2D /* Products */;
@@ -224,6 +230,7 @@
 				C7544C8726AF1EAD0003DC2D /* ContentView.swift in Sources */,
 				C7544C8526AF1EAD0003DC2D /* ABAlbumExampleApp.swift in Sources */,
 				C77BFFB126C2E46E00F38053 /* SettingPage.swift in Sources */,
+				C7D71AEF26CCFC0B00CD798F /* EditorPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

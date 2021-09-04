@@ -8,41 +8,61 @@
 import SwiftUI
 import ABAlbum
 import Photos
+import Combine
 
 struct ContentView: View {
-    @State private var mediaType: MediaType = .both
-    @State private var colorScheme: UIUserInterfaceStyle = .unspecified
-        
+    
+    @AppStorage("colorScheme") var colorScheme: UIUserInterfaceStyle?
+    @AppStorage("mediaType") var mediaType: MediaType?
+    
+    @State private var cancellable: Cancellable?
+    
+    @State private var selectedAssetLocalIdentifier: String?
+    @State private var showsEditorPage: Bool = false
+    
     /// 是否显示权限提示页. 默认: 不显示.
     @State private var showsAlbumNoPermissionView: Bool = AlbumAuthorizationStatus.isNotDetermined
     
     var albumPage: some View {
-        AlbumPage()
-            .showsNoPermissionView($showsAlbumNoPermissionView)
-            .albumFetchOptions(AlbumFetchOptions.fetchOptions(with: mediaType))
+        AlbumPage(showsAlbumNoPermissionView: $showsAlbumNoPermissionView)
+            .albumFetchOptions(.fetchOptions(with: mediaType))
             .task {
                 showsAlbumNoPermissionView = await !AlbumAuthorizationStatus.hasAlbumPermission
+                
+                cancellable = NotificationCenter.default
+                    .publisher(for: ABAlbum.actionButtonDidClickedNotification)
+                    .sink(receiveValue: { notification in
+                        print("Action Button Did Clicked", notification)
+                        selectedAssetLocalIdentifier = notification.object as? String
+                        withAnimation {
+                            showsEditorPage = true
+                        }
+                    })
             }
     }
     
     var body: some View {
         NavigationView {
-            List {
-                Section {
-                    NavigationLink("Album", destination: albumPage)
-                    
-                    NavigationLink("Camera", destination:  CameraPage())
+            ZStack {
+                
+                List {
+                    Section {
+                        NavigationLink("Album", destination: albumPage)
+                        NavigationLink("Camera", destination:  CameraPage())
+                    }
+                    Section {
+                        NavigationLink("Settings", destination: SettingPage())
+                    }
                 }
-
-                Section {
-                    NavigationLink("Settings", destination: SettingPage(mediaType: $mediaType, colorScheme: $colorScheme))
+                .listStyle(.insetGrouped)
+                
+                NavigationLink("", isActive: $showsEditorPage) {
+                    EditorPage(selectedAssetLocalIdentifier: $selectedAssetLocalIdentifier)
                 }
-
             }
-            .listStyle(.insetGrouped)
             Text("Welcome")
         }
-        .preferredColorScheme(ColorScheme(colorScheme))
+        .preferredColorScheme(ColorScheme(colorScheme ?? .unspecified))
     }
 }
 
